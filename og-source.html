@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1200px; height: 630px;
+    background: #0B1320;
+    color: #F3F1EA;
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow: hidden;
+  }
+  .glow { position: absolute; inset: 0; background: radial-gradient(120% 80% at 50% 0%, rgba(81,106,125,0.26), rgba(11,19,32,0) 65%); }
+  .wrap {
+    position: relative; height: 100%;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 90px;
+  }
+  .lockup { display: flex; align-items: center; gap: 22px; margin-bottom: 46px; }
+  .mark { display: flex; align-items: center; gap: 9px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 38px; letter-spacing: 0.02em; line-height: 1; }
+  .rule { width: 2px; height: 44px; background: #F3F1EA; display: block; }
+  .wordmark { font-family: Manrope, sans-serif; font-size: 20px; letter-spacing: 0.3em; font-weight: 500; }
+  h1 { font-family: Manrope, sans-serif; font-weight: 500; font-size: 76px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 26px; max-width: 900px; }
+  p { font-size: 25px; line-height: 1.6; color: rgba(243,241,234,0.68); max-width: 720px; margin: 0; }
+  .foot { position: absolute; left: 90px; right: 90px; bottom: 54px; display: flex; justify-content: space-between; font-size: 18px; letter-spacing: 0.06em; color: rgba(243,241,234,0.42); }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="lockup">
+      <span class="mark"><span>N</span><span class="rule"></span><span>S</span></span>
+      <span class="wordmark">NORTH SOUTH LABS</span>
+    </div>
+    <h1>Useful software,<br />thoughtfully made.</h1>
+    <p>An independent product studio building practical tools for everyday life.</p>
+  </div>
+  <div class="foot"><span>northsouthlabs.co</span><span>Burlington, VT</span></div>
+</body>
+</html>

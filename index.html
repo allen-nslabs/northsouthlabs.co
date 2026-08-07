@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>North South Labs — Useful software, thoughtfully made.</title>
+<meta name="description" content="North South Labs is an independent product studio building practical tools for everyday life. Something new is on the way." />
+<link rel="canonical" href="https://northsouthlabs.co/" />
+<meta name="theme-color" content="#0B1320" />
+<meta name="color-scheme" content="dark" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="North South Labs" />
+<meta property="og:url" content="https://northsouthlabs.co/" />
+<meta property="og:title" content="North South Labs — Useful software, thoughtfully made." />
+<meta property="og:description" content="An independent product studio building practical tools for everyday life. Something new is on the way." />
+<meta property="og:image" content="https://northsouthlabs.co/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="North South Labs — useful software, thoughtfully made." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="North South Labs — Useful software, thoughtfully made." />
+<meta name="twitter:description" content="An independent product studio building practical tools for everyday life. Something new is on the way." />
+<meta name="twitter:image" content="https://northsouthlabs.co/og.png" />
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #0B1320;
+    --paper: #F3F1EA;
+    --slate: #516A7D;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: var(--paper); text-decoration: none; }
+  a:hover { color: #ffffff; }
+  a:focus-visible {
+    outline: 2px solid var(--paper);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  ::selection { background: var(--slate); color: var(--paper); }
+
+  .page {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 80% at 50% 0%, rgba(81,106,125,0.22), rgba(11,19,32,0) 65%);
+    pointer-events: none;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 32px;
+    position: relative;
+  }
+
+  .lockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    margin-bottom: 34px;
+    flex-wrap: wrap;
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Manrope, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .mark .rule {
+    width: 2px;
+    height: 46px;
+    background: var(--paper);
+    display: block;
+  }
+
+  .wordmark {
+    font-family: Manrope, sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-family: Manrope, sans-serif;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .lede {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(243,241,234,0.7);
+    max-width: 480px;
+    margin: 0 0 44px;
+    text-wrap: pretty;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 15px 28px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+
+  .cta:hover { background: #ffffff; color: var(--ink); transform: translateY(-1px); }
+  .cta .arrow { font-size: 17px; }
+
+  footer {
+    position: relative;
+    border-top: 1px solid rgba(243,241,234,0.1);
+  }
+
+  .footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 22px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12.5px;
+    color: rgba(243,241,234,0.45);
+    letter-spacing: 0.04em;
+  }
+
+  .enter {
+    animation: rise 620ms cubic-bezier(0.16, 0.84, 0.44, 1) both;
+  }
+  .enter-2 { animation-delay: 80ms; }
+  .enter-3 { animation-delay: 160ms; }
+  .enter-4 { animation-delay: 240ms; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    main { padding: 64px 24px; }
+    .lockup { gap: 16px; margin-bottom: 28px; }
+    .mark { font-size: 32px; }
+    .mark .rule { height: 36px; }
+    .wordmark { font-size: 15px; letter-spacing: 0.24em; }
+    h1 { font-size: 32px; }
+    .lede { font-size: 16px; margin-bottom: 36px; }
+    .cta { padding: 14px 24px; font-size: 14.5px; }
+    .footer-inner { justify-content: center; text-align: center; gap: 8px; font-size: 12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .enter { animation: none; }
+    .cta { transition: none; }
+    .cta:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="glow" aria-hidden="true"></div>
+
+    <main>
+      <div class="lockup enter">
+        <span class="mark" aria-hidden="true">
+          <span>N</span><span class="rule"></span><span>S</span>
+        </span>
+        <span class="wordmark">NORTH SOUTH LABS</span>
+      </div>
+
+      <h1 class="enter enter-2">Useful software, thoughtfully made.</h1>
+
+      <p class="lede enter enter-3">An independent product studio building practical tools for everyday life. Something new is on the way.</p>
+
+      <a class="cta enter enter-4" href="mailto:hello@northsouthlabs.co">hello@northsouthlabs.co <span class="arrow" aria-hidden="true">→</span></a>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>&copy; 2026 North South Labs LLC</span>
+        <span>Burlington, VT &middot; northsouthlabs.co</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
