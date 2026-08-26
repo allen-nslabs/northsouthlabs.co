@@ -1,16 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/ai/archive/:path*",
-      "destination": "https://ai-archive-allen-nslabs-projects.vercel.app/ai/archive/:path*"
-    },
-    {
-      "source": "/ai/archive",
-      "destination": "https://ai-archive-allen-nslabs-projects.vercel.app/ai/archive/"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -24,13 +14,6 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/ai/archive/",
-      "destination": "/ai/archive",
-      "permanent": false
     }
   ]
 }
