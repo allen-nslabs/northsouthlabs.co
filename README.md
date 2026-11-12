@@ -48,6 +48,20 @@ project, which is a separate repo. Two consequences worth remembering:
   part of an Archive URL is in the hash fragment, which browsers never send in a referrer — but
   it is the kind of thing to check before adding a header here.
 
+## Project Threshold downloads
+
+`threshold.html` is an unlisted (noindex, not linked, not in the sitemap) playtest download
+page at `/threshold`. Unlisted is not private: anyone with the link can download. The zips
+are too big for git, so they live in the public Vercel Blob store `threshold-builds`
+(connected to the development environment only, so its read-write token is only in the
+gitignored `.env.local`). `vercel.json` redirects `/threshold/mac` and `/threshold/windows`
+to the current build with temporary redirects. For a new build, upload it under a new
+`threshold/<version>/` path, then update the two redirects, the version line and the
+checksums on the page:
+
+    set -a; . ./.env.local; set +a; unset VERCEL_OIDC_TOKEN
+    vercel blob put <zip> --access public --pathname threshold/<version>/<zip> --multipart true
+
 ## Editing
 
 Edit `index.html` and push to `main`. To preview locally:

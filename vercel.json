@@ -1,6 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/threshold/mac",
+      "destination": "https://asbjmdodbigiknoq.public.blob.vercel-storage.com/threshold/0.3.0-playtest1/ProjectThreshold-0.3.0-macos.zip",
+      "permanent": false
+    },
+    {
+      "source": "/threshold/windows",
+      "destination": "https://asbjmdodbigiknoq.public.blob.vercel-storage.com/threshold/0.3.0-playtest1/ProjectThreshold-0.3.0-windows-x64.zip",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -12,6 +24,15 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/threshold(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
         }
       ]
     }
