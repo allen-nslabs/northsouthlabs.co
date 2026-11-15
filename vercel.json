@@ -4,12 +4,12 @@
   "redirects": [
     {
       "source": "/threshold/mac",
-      "destination": "https://asbjmdodbigiknoq.public.blob.vercel-storage.com/threshold/0.3.0-playtest1/ProjectThreshold-0.3.0-macos.zip",
+      "destination": "https://asbjmdodbigiknoq.public.blob.vercel-storage.com/threshold/0.3.1-playtest2/ProjectThreshold-0.3.1-macos.zip",
       "permanent": false
     },
     {
       "source": "/threshold/windows",
-      "destination": "https://asbjmdodbigiknoq.public.blob.vercel-storage.com/threshold/0.3.0-playtest1/ProjectThreshold-0.3.0-windows-x64.zip",
+      "destination": "https://asbjmdodbigiknoq.public.blob.vercel-storage.com/threshold/0.3.1-playtest2/ProjectThreshold-0.3.1-windows-x64.zip",
       "permanent": false
     }
   ],
